@@ -18,7 +18,7 @@ export const ProcessSection: React.FC = () => {
   };
 
   return (
-    <section id="process" className="py-20 md:py-28 border-t border-white/5 bg-[#0b0c13] relative">
+    <section id="process" className="py-20 md:py-28 border-t border-white/5 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -39,7 +39,7 @@ export const ProcessSection: React.FC = () => {
           {processSteps.map((step, idx) => (
             <div
               key={idx}
-              className="relative p-6 rounded-2xl bg-[#11131c] border border-white/5 hover:border-amber-400/30 transition-all group flex flex-col justify-between"
+              className="relative p-6 rounded-2xl bg-[#11131c]/75 backdrop-blur-md border border-white/5 hover:border-amber-400/30 transition-all group flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-6">

@@ -1,6 +1,13 @@
 import React from 'react';
 import { siteConfig } from '../data/portfolioData';
-import { Video, ArrowUp, Instagram, Youtube, Facebook, Palette } from 'lucide-react';
+import { Video, ArrowUp } from 'lucide-react';
+import {
+  ThreeDWhatsAppIcon,
+  ThreeDFacebookIcon,
+  ThreeDYouTubeIcon,
+  ThreeDInstagramIcon,
+  ThreeDBehanceIcon,
+} from './ThreeDSocialIcon';
 
 interface FooterProps {
   onOpenEditGuide?: () => void;
@@ -12,7 +19,7 @@ export const Footer: React.FC<FooterProps> = () => {
   };
 
   return (
-    <footer className="bg-[#07080d]/85 backdrop-blur-md border-t border-white/5 py-12 md:py-16 text-neutral-400 text-xs">
+    <footer className="border-t border-white/5 py-12 md:py-16 text-neutral-400 text-xs relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-12 border-b border-white/5">
@@ -43,18 +50,30 @@ export const Footer: React.FC<FooterProps> = () => {
             </p>
           </div>
 
-          {/* Social Links: Facebook, YouTube, Instagram only */}
+          {/* Social Links: WhatsApp, Facebook, YouTube, Instagram, Behance */}
           <div className="flex items-center gap-3">
+            {siteConfig.contact.whatsapp && (
+              <a
+                href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, '')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-11 h-11 rounded-2xl bg-[#12141f] hover:bg-[#161a29] border border-white/10 hover:border-emerald-500/50 flex items-center justify-center transition-all transform hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/20 group cursor-pointer"
+                aria-label="WhatsApp"
+                title="WhatsApp Direct Chat"
+              >
+                <ThreeDWhatsAppIcon className="w-7 h-7 transition-transform group-hover:scale-110" />
+              </a>
+            )}
             {siteConfig.contact.socials.facebook && (
               <a
                 href={siteConfig.contact.socials.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-white/5 hover:bg-blue-600/20 border border-white/10 hover:border-blue-500/40 flex items-center justify-center text-neutral-300 hover:text-blue-400 transition-colors"
+                className="w-11 h-11 rounded-2xl bg-[#12141f] hover:bg-[#161a29] border border-white/10 hover:border-blue-500/50 flex items-center justify-center transition-all transform hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/20 group cursor-pointer"
                 aria-label="Facebook"
                 title="Facebook Profile"
               >
-                <Facebook className="w-4 h-4" />
+                <ThreeDFacebookIcon className="w-7 h-7 transition-transform group-hover:scale-110" />
               </a>
             )}
             {siteConfig.contact.socials.youtube && (
@@ -62,11 +81,11 @@ export const Footer: React.FC<FooterProps> = () => {
                 href={siteConfig.contact.socials.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-white/5 hover:bg-red-600/20 border border-white/10 hover:border-red-500/40 flex items-center justify-center text-neutral-300 hover:text-red-400 transition-colors"
+                className="w-11 h-11 rounded-2xl bg-[#12141f] hover:bg-[#161a29] border border-white/10 hover:border-red-500/50 flex items-center justify-center transition-all transform hover:-translate-y-1 hover:shadow-xl hover:shadow-red-500/20 group cursor-pointer"
                 aria-label="YouTube"
                 title="YouTube Channel (@Borhan_Creation-e6n)"
               >
-                <Youtube className="w-4 h-4" />
+                <ThreeDYouTubeIcon className="w-7 h-7 transition-transform group-hover:scale-110" />
               </a>
             )}
             {siteConfig.contact.socials.instagram && (
@@ -74,11 +93,11 @@ export const Footer: React.FC<FooterProps> = () => {
                 href={siteConfig.contact.socials.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-white/5 hover:bg-pink-600/20 border border-white/10 hover:border-pink-500/40 flex items-center justify-center text-neutral-300 hover:text-pink-400 transition-colors"
+                className="w-11 h-11 rounded-2xl bg-[#12141f] hover:bg-[#161a29] border border-white/10 hover:border-pink-500/50 flex items-center justify-center transition-all transform hover:-translate-y-1 hover:shadow-xl hover:shadow-pink-500/20 group cursor-pointer"
                 aria-label="Instagram"
                 title="Instagram Profile (@borhan_xyz)"
               >
-                <Instagram className="w-4 h-4" />
+                <ThreeDInstagramIcon className="w-7 h-7 transition-transform group-hover:scale-110" />
               </a>
             )}
             {siteConfig.contact.socials.behance && (
@@ -86,11 +105,11 @@ export const Footer: React.FC<FooterProps> = () => {
                 href={siteConfig.contact.socials.behance}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-white/5 hover:bg-blue-600/20 border border-white/10 hover:border-blue-500/40 flex items-center justify-center text-neutral-300 hover:text-blue-400 transition-colors"
+                className="w-11 h-11 rounded-2xl bg-[#12141f] hover:bg-[#161a29] border border-white/10 hover:border-blue-500/50 flex items-center justify-center transition-all transform hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/20 group cursor-pointer"
                 aria-label="Behance"
                 title="Behance Portfolio (@borhanuddin-2004)"
               >
-                <Palette className="w-4 h-4" />
+                <ThreeDBehanceIcon className="w-7 h-7 transition-transform group-hover:scale-110" />
               </a>
             )}
           </div>

@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import { siteConfig } from '../data/portfolioData';
-import { Mail, MessageCircle, Send, Check, Copy, ExternalLink, Calendar, Sparkles, Facebook, Youtube, Instagram, Palette, Loader2, ArrowRight } from 'lucide-react';
+import { Mail, Send, Check, Copy, ExternalLink, Calendar, Sparkles, Loader2, ArrowRight } from 'lucide-react';
+import {
+  ThreeDWhatsAppIcon,
+  ThreeDFacebookIcon,
+  ThreeDYouTubeIcon,
+  ThreeDInstagramIcon,
+  ThreeDBehanceIcon,
+} from './ThreeDSocialIcon';
 
 interface ContactSectionProps {
   preselectedService?: string;
@@ -87,7 +94,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
   );
 
   return (
-    <section id="contact" className="py-20 md:py-28 border-t border-white/5 relative bg-[#0b0c13]">
+    <section id="contact" className="py-20 md:py-28 border-t border-white/5 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -142,13 +149,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
                   href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, '')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 rounded-xl bg-[#12141f] hover:bg-[#161a29] border border-white/5 hover:border-emerald-500/40 transition-all flex items-center justify-between gap-4 group"
+                  className="p-4 rounded-xl bg-[#12141f] hover:bg-[#161a29] border border-white/5 hover:border-emerald-500/40 transition-all flex items-center justify-between gap-4 group transform hover:-translate-y-0.5"
                   title="Click to chat on WhatsApp"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-emerald-500/10 group-hover:bg-emerald-500/20 flex items-center justify-center text-emerald-400 transition-colors">
-                      <MessageCircle className="w-5 h-5" />
-                    </div>
+                  <div className="flex items-center gap-3.5">
+                    <ThreeDWhatsAppIcon className="w-11 h-11 transition-transform group-hover:scale-110" />
                     <div>
                       <div className="text-[11px] text-neutral-400 font-medium">Instant WhatsApp Chat</div>
                       <div className="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors font-mono">
@@ -165,13 +170,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
                     href={siteConfig.contact.socials.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-4 rounded-xl bg-[#12141f] hover:bg-[#161a29] border border-white/5 hover:border-blue-500/40 transition-all flex items-center justify-between gap-4 group"
+                    className="p-4 rounded-xl bg-[#12141f] hover:bg-[#161a29] border border-white/5 hover:border-blue-500/40 transition-all flex items-center justify-between gap-4 group transform hover:-translate-y-0.5"
                     title="Click to visit Facebook Profile"
                   >
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-blue-500/10 group-hover:bg-blue-500/20 flex items-center justify-center text-blue-400 transition-colors">
-                        <Facebook className="w-5 h-5 fill-current" />
-                      </div>
+                    <div className="flex items-center gap-3.5">
+                      <ThreeDFacebookIcon className="w-11 h-11 transition-transform group-hover:scale-110" />
                       <div>
                         <div className="text-[11px] text-neutral-400 font-medium">Official Facebook Profile</div>
                         <div className="text-sm font-bold text-white group-hover:text-blue-300 transition-colors">
@@ -189,13 +192,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
                     href={siteConfig.contact.socials.youtube}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-4 rounded-xl bg-[#12141f] hover:bg-[#161a29] border border-white/5 hover:border-red-500/40 transition-all flex items-center justify-between gap-4 group"
+                    className="p-4 rounded-xl bg-[#12141f] hover:bg-[#161a29] border border-white/5 hover:border-red-500/40 transition-all flex items-center justify-between gap-4 group transform hover:-translate-y-0.5"
                     title="Click to visit YouTube Channel"
                   >
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-red-500/10 group-hover:bg-red-500/20 flex items-center justify-center text-red-400 transition-colors">
-                        <Youtube className="w-5 h-5" />
-                      </div>
+                    <div className="flex items-center gap-3.5">
+                      <ThreeDYouTubeIcon className="w-11 h-11 transition-transform group-hover:scale-110" />
                       <div>
                         <div className="text-[11px] text-neutral-400 font-medium">YouTube Channel</div>
                         <div className="text-sm font-bold text-white group-hover:text-red-300 transition-colors font-mono">
@@ -213,13 +214,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
                     href={siteConfig.contact.socials.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-4 rounded-xl bg-[#12141f] hover:bg-[#161a29] border border-white/5 hover:border-pink-500/40 transition-all flex items-center justify-between gap-4 group"
+                    className="p-4 rounded-xl bg-[#12141f] hover:bg-[#161a29] border border-white/5 hover:border-pink-500/40 transition-all flex items-center justify-between gap-4 group transform hover:-translate-y-0.5"
                     title="Click to visit Instagram Profile"
                   >
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-pink-500/10 group-hover:bg-pink-500/20 flex items-center justify-center text-pink-400 transition-colors">
-                        <Instagram className="w-5 h-5" />
-                      </div>
+                    <div className="flex items-center gap-3.5">
+                      <ThreeDInstagramIcon className="w-11 h-11 transition-transform group-hover:scale-110" />
                       <div>
                         <div className="text-[11px] text-neutral-400 font-medium">Instagram Profile</div>
                         <div className="text-sm font-bold text-white group-hover:text-pink-300 transition-colors font-mono">
@@ -237,13 +236,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
                     href={siteConfig.contact.socials.behance}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-4 rounded-xl bg-[#12141f] hover:bg-[#161a29] border border-white/5 hover:border-blue-500/40 transition-all flex items-center justify-between gap-4 group"
+                    className="p-4 rounded-xl bg-[#12141f] hover:bg-[#161a29] border border-white/5 hover:border-blue-500/40 transition-all flex items-center justify-between gap-4 group transform hover:-translate-y-0.5"
                     title="Click to visit Behance Portfolio"
                   >
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-blue-500/10 group-hover:bg-blue-500/20 flex items-center justify-center text-blue-400 transition-colors">
-                        <Palette className="w-5 h-5" />
-                      </div>
+                    <div className="flex items-center gap-3.5">
+                      <ThreeDBehanceIcon className="w-11 h-11 transition-transform group-hover:scale-110" />
                       <div>
                         <div className="text-[11px] text-neutral-400 font-medium">Behance Portfolio</div>
                         <div className="text-sm font-bold text-white group-hover:text-blue-300 transition-colors font-mono">
@@ -271,7 +268,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
           </div>
 
           {/* Right Column: Project Inquiry Form */}
-          <div className="lg:col-span-7 bg-[#11131c] border border-white/10 rounded-3xl p-6 sm:p-10 shadow-2xl relative">
+          <div className="lg:col-span-7 bg-[#11131c]/85 backdrop-blur-md border border-white/10 rounded-3xl p-6 sm:p-10 shadow-2xl relative">
             {submitted ? (
               <div className="py-6">
                 <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center mx-auto mb-5">
@@ -322,9 +319,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
                     href={`https://wa.me/8801811263668?text=${whatsappMessage}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 py-3 px-4 rounded-xl text-xs font-bold text-emerald-300 bg-emerald-500/15 hover:bg-emerald-500/20 border border-emerald-500/30 transition-colors flex items-center justify-center gap-2"
+                    className="flex-1 py-3 px-4 rounded-xl text-xs font-bold text-white bg-emerald-600/30 hover:bg-emerald-600/40 border border-emerald-500/40 transition-all flex items-center justify-center gap-2 transform hover:-translate-y-0.5 hover:shadow-lg shadow-emerald-500/20"
                   >
-                    <MessageCircle className="w-4 h-4 text-emerald-400" />
+                    <ThreeDWhatsAppIcon className="w-5 h-5" />
                     <span>Send on WhatsApp</span>
                   </a>
                 </div>

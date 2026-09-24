@@ -139,10 +139,6 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
               {showreel.title}
             </h2>
-
-            <p className="text-xs sm:text-sm text-neutral-400 max-w-lg mt-2">
-              {showreel.subheadline}
-            </p>
           </div>
 
           {/* Video Container with glow and custom controls */}

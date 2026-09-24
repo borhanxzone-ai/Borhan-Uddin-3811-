@@ -170,16 +170,6 @@ export const VideoModal: React.FC<VideoModalProps> = ({ project, onClose, onBook
             </div>
           </div>
 
-          {/* Description */}
-          <div>
-            <h4 className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">
-              Project Overview
-            </h4>
-            <p className="text-sm text-neutral-300 leading-relaxed">
-              {project.description}
-            </p>
-          </div>
-
           {/* Challenge & Solution Grid (if present) */}
           {project.challengeAndSolution && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

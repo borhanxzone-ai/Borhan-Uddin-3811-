@@ -86,14 +86,11 @@ export const WorkCard: React.FC<WorkCardProps> = ({ project, onOpenModal }) => {
       </div>
 
       {/* Content Details */}
-      <div className="p-4 sm:p-5 flex flex-col flex-grow justify-between">
+      <div className="p-4 sm:p-5 flex flex-col flex-grow justify-between gap-3">
         <div>
-          <h3 className="font-heading text-base sm:text-lg font-bold text-white group-hover:text-amber-300 transition-colors line-clamp-1 mb-2">
+          <h3 className="font-heading text-base sm:text-lg font-bold text-white group-hover:text-amber-300 transition-colors line-clamp-2">
             {project.title}
           </h3>
-          <p className="text-xs sm:text-sm text-neutral-400 line-clamp-2 leading-relaxed mb-4">
-            {project.description}
-          </p>
         </div>
 
         {/* Deliverables & Tags */}

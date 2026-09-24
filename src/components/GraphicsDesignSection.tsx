@@ -184,7 +184,7 @@ export const GraphicsDesignSection: React.FC<GraphicsDesignSectionProps> = ({ on
   };
 
   return (
-    <section id="graphics" className="py-20 md:py-28 border-t border-white/5 relative bg-[#090b12] overflow-hidden">
+    <section id="graphics" className="py-20 md:py-28 border-t border-white/5 relative overflow-hidden">
       
       {/* Ambient background lighting */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none -z-10" />

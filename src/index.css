@@ -15,7 +15,7 @@
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #090a0f;
+  background: #16161A;
 }
 ::-webkit-scrollbar-thumb {
   background: #272a38;
@@ -24,3 +24,115 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #3e445b;
 }
+
+/* Animated Floating Ambient Bubbles */
+@keyframes bubbleWander1 {
+  0%, 100% {
+    transform: translate3d(0px, 0px, 0) scale(1);
+  }
+  25% {
+    transform: translate3d(50px, -70px, 0) scale(1.08);
+  }
+  50% {
+    transform: translate3d(-35px, -120px, 0) scale(0.96);
+  }
+  75% {
+    transform: translate3d(30px, -45px, 0) scale(1.04);
+  }
+}
+
+@keyframes bubbleWander2 {
+  0%, 100% {
+    transform: translate3d(0px, 0px, 0) scale(1);
+  }
+  30% {
+    transform: translate3d(-65px, 55px, 0) scale(1.1);
+  }
+  60% {
+    transform: translate3d(45px, 95px, 0) scale(0.92);
+  }
+  85% {
+    transform: translate3d(-25px, 35px, 0) scale(1.05);
+  }
+}
+
+@keyframes bubbleWander3 {
+  0%, 100% {
+    transform: translate3d(0px, 0px, 0) scale(0.95);
+  }
+  35% {
+    transform: translate3d(80px, -50px, 0) scale(1.12);
+  }
+  70% {
+    transform: translate3d(-55px, 65px, 0) scale(0.98);
+  }
+}
+
+@keyframes bubbleWander4 {
+  0%, 100% {
+    transform: translate3d(0px, 0px, 0) scale(1);
+  }
+  25% {
+    transform: translate3d(-45px, -75px, 0) scale(1.06);
+  }
+  50% {
+    transform: translate3d(55px, -35px, 0) scale(0.94);
+  }
+  75% {
+    transform: translate3d(-30px, 65px, 0) scale(1.08);
+  }
+}
+
+@keyframes bubbleFloatRise {
+  0% {
+    transform: translate3d(0px, 110vh, 0) scale(0.85);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.55;
+  }
+  50% {
+    transform: translate3d(45px, 50vh, 0) scale(1.08);
+    opacity: 0.7;
+  }
+  85% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate3d(-35px, -15vh, 0) scale(0.9);
+    opacity: 0;
+  }
+}
+
+.animate-bubble-1 {
+  animation: bubbleWander1 19s ease-in-out infinite;
+}
+.animate-bubble-2 {
+  animation: bubbleWander2 23s ease-in-out infinite;
+}
+.animate-bubble-3 {
+  animation: bubbleWander3 27s ease-in-out infinite;
+}
+.animate-bubble-4 {
+  animation: bubbleWander4 21s ease-in-out infinite;
+}
+.animate-bubble-rise {
+  animation: bubbleFloatRise 24s linear infinite;
+}
+
+@keyframes rgbHueShift {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(180deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.animate-rgb-shift {
+  animation: rgbHueShift 16s linear infinite;
+}
+

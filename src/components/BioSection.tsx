@@ -1,6 +1,13 @@
 import React from 'react';
-import { MapPin, Sparkles, MessageSquare, CheckCircle2, Video, Film, ArrowRight, ExternalLink, Facebook, Youtube, Instagram, Palette } from 'lucide-react';
+import { MapPin, Sparkles, CheckCircle2, Video, Film, ArrowRight, ExternalLink } from 'lucide-react';
 import { siteConfig } from '../data/portfolioData';
+import {
+  ThreeDWhatsAppIcon,
+  ThreeDFacebookIcon,
+  ThreeDYouTubeIcon,
+  ThreeDInstagramIcon,
+  ThreeDBehanceIcon,
+} from './ThreeDSocialIcon';
 
 interface BioSectionProps {
   onContactClick?: () => void;
@@ -123,9 +130,9 @@ export const BioSection: React.FC<BioSectionProps> = ({ onContactClick }) => {
                   href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, '')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/20 text-emerald-300 text-xs sm:text-sm font-medium transition-colors"
+                  className="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-[#131622] hover:bg-[#181d2e] border border-emerald-500/25 hover:border-emerald-500/50 text-white text-xs sm:text-sm font-semibold transition-all transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-emerald-500/15 group"
                 >
-                  <MessageSquare className="w-4 h-4 text-emerald-400" />
+                  <ThreeDWhatsAppIcon className="w-6 h-6 transition-transform group-hover:scale-110" />
                   <span>WhatsApp</span>
                 </a>
               )}
@@ -135,9 +142,9 @@ export const BioSection: React.FC<BioSectionProps> = ({ onContactClick }) => {
                   href={bio.photoLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600/15 hover:bg-blue-600/25 border border-blue-500/25 text-blue-300 text-xs sm:text-sm font-medium transition-colors"
+                  className="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-[#131622] hover:bg-[#181d2e] border border-blue-500/25 hover:border-blue-500/50 text-white text-xs sm:text-sm font-semibold transition-all transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/15 group"
                 >
-                  <Facebook className="w-4 h-4 text-blue-400" />
+                  <ThreeDFacebookIcon className="w-6 h-6 transition-transform group-hover:scale-110" />
                   <span>Facebook</span>
                 </a>
               )}
@@ -147,10 +154,10 @@ export const BioSection: React.FC<BioSectionProps> = ({ onContactClick }) => {
                   href={siteConfig.contact.socials.youtube}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-red-600/15 hover:bg-red-600/25 border border-red-500/25 text-red-300 text-xs sm:text-sm font-medium transition-colors"
+                  className="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-[#131622] hover:bg-[#181d2e] border border-red-500/25 hover:border-red-500/50 text-white text-xs sm:text-sm font-semibold transition-all transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-red-500/15 group"
                   title="YouTube Channel"
                 >
-                  <Youtube className="w-4 h-4 text-red-400" />
+                  <ThreeDYouTubeIcon className="w-6 h-6 transition-transform group-hover:scale-110" />
                   <span>YouTube</span>
                 </a>
               )}
@@ -160,10 +167,10 @@ export const BioSection: React.FC<BioSectionProps> = ({ onContactClick }) => {
                   href={siteConfig.contact.socials.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-pink-600/15 hover:bg-pink-600/25 border border-pink-500/25 text-pink-300 text-xs sm:text-sm font-medium transition-colors"
+                  className="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-[#131622] hover:bg-[#181d2e] border border-pink-500/25 hover:border-pink-500/50 text-white text-xs sm:text-sm font-semibold transition-all transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-pink-500/15 group"
                   title="Instagram Profile"
                 >
-                  <Instagram className="w-4 h-4 text-pink-400" />
+                  <ThreeDInstagramIcon className="w-6 h-6 transition-transform group-hover:scale-110" />
                   <span>Instagram</span>
                 </a>
               )}
@@ -173,10 +180,10 @@ export const BioSection: React.FC<BioSectionProps> = ({ onContactClick }) => {
                   href={siteConfig.contact.socials.behance}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600/15 hover:bg-blue-600/25 border border-blue-500/25 text-blue-300 text-xs sm:text-sm font-medium transition-colors"
+                  className="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-[#131622] hover:bg-[#181d2e] border border-blue-500/25 hover:border-blue-500/50 text-white text-xs sm:text-sm font-semibold transition-all transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/15 group"
                   title="Behance Portfolio"
                 >
-                  <Palette className="w-4 h-4 text-blue-400" />
+                  <ThreeDBehanceIcon className="w-6 h-6 transition-transform group-hover:scale-110" />
                   <span>Behance</span>
                 </a>
               )}
